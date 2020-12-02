@@ -15,6 +15,14 @@ filebeat.config.modules:
 output.logstash:
   hosts: [{% for ls in groups['logstash'] %}"{{ ls }}:5044"{% if not loop.last %},{% endif %}{% endfor %}]
 
+logging.level: info
+logging.to_files: true
+logging.files:
+  path: /var/log/filebeat
+  name: filebeat
+  keepfiles: 7
+  permissions: 0644
+
 processors:
   - add_host_metadata:
       when.not.contains.tags: forwarded
