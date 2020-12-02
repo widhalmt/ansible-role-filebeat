@@ -1,0 +1,23 @@
+---
+# tasks file for filebeat
+
+- import_tasks: redhat.yml
+  when: ansible_os_family|lower == 'redhat'
+
+- name: Install Filebeat
+  package:
+    name: filebeat
+
+- name: Configure Filebeat
+  template:
+    src: filebeat.yml.j2
+    dest: /etc/filebeat/filebeat.yml
+    owner: root
+    group: root
+    mode: 0600
+
+- name: Start Filebeat
+  service:
+    name: filebeat
+    state: started
+    enabled: yes

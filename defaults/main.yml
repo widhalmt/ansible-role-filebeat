@@ -1,0 +1,4 @@
+---
+# defaults file for filebeat
+filebeat_release: 7
+filebeat_manage_repo: true
