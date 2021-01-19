@@ -1,6 +1,8 @@
 Filebeat
 =========
 
+[![CI](https://github.com/widhalmt/ansible-role-ansible/workflows/Molecule%20Test/badge.svg?event=push)](https://github.com/widhalmt/ansible-role-filebeat/workflows/Molecule%20Test/badge.svg)
+
 This role installs and configures Filebeat.
 
 *WARNING*: This is a very, very early prototype only usable for a very specific environment. **DO NOT USE IN PRODUCTION**
