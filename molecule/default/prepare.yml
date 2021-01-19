@@ -1,0 +1,10 @@
+---
+- name: Prepare
+  hosts: all
+  tasks:
+    - name: Install packages for Debian
+      package:
+        name:
+          - gpg
+          - procps
+      when: ansible_os_family == "Debian"
