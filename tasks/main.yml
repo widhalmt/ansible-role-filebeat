@@ -1,9 +1,6 @@
 ---
 # tasks file for filebeat
 
-- import_tasks: redhat.yml
-  when: ansible_os_family|lower == 'redhat'
-
 - name: Install Filebeat
   package:
     name: filebeat

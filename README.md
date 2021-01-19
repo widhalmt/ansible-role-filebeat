@@ -1,6 +1,8 @@
 Filebeat
 =========
 
+[![CI](https://github.com/widhalmt/ansible-role-ansible/workflows/Molecule%20Test/badge.svg?event=push)](https://github.com/widhalmt/ansible-role-filebeat/workflows/Molecule%20Test/badge.svg)
+
 This role installs and configures Filebeat.
 
 *WARNING*: This is a very, very early prototype only usable for a very specific environment. **DO NOT USE IN PRODUCTION**
@@ -8,7 +10,7 @@ This role installs and configures Filebeat.
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+You need to have Filebeat available in your software repositories. We provide a role for just that but if you have other ways of managing software, just make sure it's available. Alternatively you can install Filebeat yourself.
 
 Role Variables
 --------------
