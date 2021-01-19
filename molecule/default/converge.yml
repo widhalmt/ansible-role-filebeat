@@ -2,6 +2,10 @@
 - name: Converge
   hosts: all
   tasks:
+    - name: "Include Elastics repos role"
+      include_role:
+        name: elastic-repos
+
     - name: "Include filebeat"
       include_role:
         name: "{{ lookup('env', 'MOLECULE_PROJECT_DIRECTORY') | basename }}"
