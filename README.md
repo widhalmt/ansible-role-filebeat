@@ -19,6 +19,16 @@ Role Variables
 * **filebeat_syslog_udp_port**: Port of UDP Syslog input (Default: `514`)
 * **filebeat_syslog_tcp**: Use TCP Syslog input (Default: `false`)
 * **filebeat_syslog_tcp_port**: Port of TCP Syslog input (Default: `514`)
+* **filebeat_log_input**: Enable Logfile reading (Default: `true`)
+* **filebeat_log_inputs**: Logfiles to read (Default: see below)
+
+Default of `filebeat_log_inputs`
+```
+  messages:
+    name: messages
+    paths:
+      - /var/log/messages
+```
 
 Dependencies
 ------------
