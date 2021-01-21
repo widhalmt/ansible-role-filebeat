@@ -12,6 +12,8 @@
     owner: root
     group: root
     mode: 0600
+  notify:
+    - Restart Filebeat
 
 - name: Start Filebeat
   service:
