@@ -15,7 +15,10 @@ You need to have Filebeat available in your software repositories. We provide a 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+* **filebeat_syslog_udp**: Use UDP Syslog input (Default: `false`)
+* **filebeat_syslog_udp_port**: Port of UDP Syslog input (Default: `514`)
+* **filebeat_syslog_tcp**: Use TCP Syslog input (Default: `false`)
+* **filebeat_syslog_tcp_port**: Port of TCP Syslog input (Default: `514`)
 
 Dependencies
 ------------

@@ -1,12 +1,16 @@
 filebeat.inputs:
+{% if filebeat_syslog_tcp | bool %}
 - type: tcp
   enabled: true
   max_message_size: 10MiB
-  host: "0.0.0.0:514"
+  host: "0.0.0.0:{{ filebeat_syslog_tcp_port }}"
+{% endif %}
+{% if filebeat_syslog_udp | bool %}
 - type: udp
   enabled: true
   max_message_size: 10MiB
-  host: "0.0.0.0:514"
+  host: "0.0.0.0:{{ filebeat_syslog_udp_port }}"
+{% endif %}
 
 filebeat.config.modules:
   path: ${path.config}/modules.d/*.yml
